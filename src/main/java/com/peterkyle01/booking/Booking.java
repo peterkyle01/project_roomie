@@ -20,12 +20,16 @@ public class Booking {
     private Integer id;
     private Date checkIn;
     private Date checkOut;
+    private String fromTime;
+    private String toTime;
     private String customerEmail;
     private Integer roomId;
 
-    public Booking(Date checkIn, Date checkOut, String customerEmail, Integer roomId) {
+    public Booking(Date checkIn, Date checkOut, String fromTime, String toTime, String customerEmail, Integer roomId) {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
+        this.fromTime = fromTime;
+        this.toTime = toTime;
         this.customerEmail = customerEmail;
         this.roomId = roomId;
     }

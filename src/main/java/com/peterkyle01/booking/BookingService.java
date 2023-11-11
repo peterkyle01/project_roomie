@@ -38,21 +38,6 @@ public class BookingService {
         return ResponseEntity.ok(booking);
     }
 
-    public ResponseEntity<Booking> updateBooking(Optional<Integer> bookingId, Optional<Booking> booking) {
-
-        if (bookingId.isEmpty() | booking.isEmpty()) {
-            return ResponseEntity.badRequest().build();
-        }
-
-        Booking newBooking = new Booking();
-        newBooking.setCheckIn(booking.get().getCheckIn());
-        newBooking.setCheckOut(booking.get().getCheckOut());
-        newBooking.setCustomerEmail(booking.get().getCustomerEmail());
-
-        bookingRepository.save(newBooking);
-
-        return ResponseEntity.ok(newBooking);
-    }
 
     public ResponseEntity<Booking> deleteBooking(Integer bookingId) {
         if (bookingId==null) {
