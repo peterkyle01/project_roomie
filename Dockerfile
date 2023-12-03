@@ -1,7 +1,5 @@
 FROM amazoncorretto:21-al2023-jdk
-LABEL author="peterkyle01"
 
-ENV SPRING_DATASOURCE_URL="jdbc:mysql://veqkigf8ql4575mnb3q9:pscale_pw_zWpcqUh8xJkBAva7bUMdQ7sbqj6MojNMQ8M84uZHWxZ@aws.connect.psdb.cloud/peterkyle01?sslaccept=strict"
 ENV SPRING_DATASOURCE_DRIVER_CLASS="com.mysql.cj.jdbc.Driver"
 ENV SPRING_JPA_GENETATE_DDL="true"
 ENV SPRING_JPA_SHOW_SQL="true"
